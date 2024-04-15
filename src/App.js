@@ -1,24 +1,22 @@
-import logo from './logo.svg';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import BackendAdmin from './BackendAdmin';
+import BackendAdminResponse from './BackendAdminResponse';
+import MainPage from './MainPage';
+import Nav from './Nav';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+    <Nav />
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="admin/" element={<BackendAdmin />} />
+          <Route path="admin/:id/" element={<BackendAdminResponse />}></Route>
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
