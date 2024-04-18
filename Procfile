@@ -1,2 +1,2 @@
 release: python panel/manage.py migrate
-web: gunicorn panel/ticket_project.wsgi --log-file -
+web: gunicorn --chdir panel/ticket_project ticket_project.wsgi:application --log-file -
