@@ -62,10 +62,10 @@ function BackendAdminResponse() {
         } catch (error) {
             console.error(error.message);
         }
-        // Delay reload by .5 second so the console.log message can be seen
+        // Delay reload by 1 second so the console.log message can be seen
         setTimeout(() => {
             window.location.reload();
-        }, 500)
+        }, 1000)
     };
 
     const handleChangeStatus = async () => {
@@ -105,11 +105,11 @@ function BackendAdminResponse() {
                     </p>
 
                     <h3>Write a Response</h3>
-                    <textarea onChange={handleResponseChange} className='form-control' rows="4" cols="50" style={{ marginBottom: '15px' }} />
+                    <textarea onChange={handleResponseChange} className='form-control' id="handleResponseChange" rows="4" cols="50" style={{ marginBottom: '15px' }} />
                     <button onClick={handleSubmit} className="btn btn-primary fw-bold fs border border-dark border-2 rounded " id="button" style={{ backgroundColor: '#D36D6D', color: '#FFFFFF', marginBottom: '10px' }} >Submit Response</button>
 
                     <h3>Change Status</h3>
-                    <select onChange={handleStatus} className="form-select mb-3">
+                    <select onChange={handleStatus} className="form-select mb-3" id="handleStatus">
                         <option value="new">New</option>
                         <option value="in_progress">In Progress</option>
                         <option value="resolved">Resolved</option>

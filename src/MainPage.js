@@ -47,15 +47,15 @@ function MainPage() {
                 <h1>Submit a Help Desk Ticket</h1>
                 <form onSubmit={handleSubmit} id="submit-help-desk-ticket">
                 <div className="form-floating mb-3">
-                    <input onChange={handleNameChange} value={ticket.name} placeholder="Enter Name" required type="text" name="name" id="name" className="form-control" />
+                    <input onChange={handleNameChange} value={ticket.name} placeholder="Enter Name" required type="text" name="name" id="name" className="form-control" autoComplete="on" />
                     <label htmlFor="name">Name</label>
                 </div>
                 <div className="form-floating mb-3">
-                    <input onChange={handleEmailChange} value={ticket.email} placeholder="email" required type="text" name="email" id="email" className="form-control" />
+                    <input onChange={handleEmailChange} value={ticket.email} placeholder="email" required type="text" name="email" id="email" className="form-control" autoComplete="on" />
                     <label htmlFor="email">Email</label>
                 </div>
                 <div className="form-floating mb-3">
-                    <input onChange={handleDescriptionChange} value={ticket.description} placeholder="description" required type="text"  name="description" id="desctipion" className="form-control"/>
+                    <input onChange={handleDescriptionChange} value={ticket.description} placeholder="description" required type="text"  name="description" id="description" className="form-control" autoComplete="on"/>
                     <label htmlFor="description">Description</label>
                 </div>
                 <button className="btn" style={{ backgroundColor: '#D36D6D', color: '#FFFFFF' }}>Submit</button>
